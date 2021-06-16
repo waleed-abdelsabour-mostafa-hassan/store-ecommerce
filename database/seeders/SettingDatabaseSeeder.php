@@ -27,10 +27,10 @@ class SettingDatabaseSeeder extends Seeder
             'outer_shipping_cost' => 0,
             'free_shipping_cost' => 0,
             'translatable' => [
-                'store_name' =>'Elwalid Store',
-                'free_shipping_lable' => 'Free shipping',
-                'local_lable' => 'Local shipping',
-                'outer_lable' => 'Outer shipping',
+                'store_name' =>'متجر الوليد',
+                'free_shipping_lable' => 'توصيل مجانى ',
+                'local_lable' => 'توصيل داخلى ',
+                'outer_lable' => 'توصيل خارجى ',
 
             ],
         ]);
