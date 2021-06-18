@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(SettingDatabaseSeeder::class);
         $this->call(AdminDatabaseSeeder::class);  // use {composer dump-autoload} in terminal to see changes in codes
+        $this->call(CategoryDatabaseSeeder::class);
     }
 }

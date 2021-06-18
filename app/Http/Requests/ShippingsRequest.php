@@ -4,8 +4,16 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @property mixed value
+ * @property mixed plain_value
+ */
 class ShippingsRequest extends FormRequest
 {
+    /**
+     * @var mixed
+     */
+
     /**
      * Determine if the user is authorized to make this request.
      *

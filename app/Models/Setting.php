@@ -5,6 +5,10 @@ namespace App\Models;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static find($id)
+ * @method static updateOrCreate(array $array, array $array1)
+ */
 class Setting extends Model
 {
     use Translatable;
@@ -14,7 +18,7 @@ class Setting extends Model
      * @var array
      */
     protected $with = ['translations'];
-    protected $translatedAttributes = ['value'];
+    public $translatedAttributes=['value'];
     /**
      * the attributes that are mass assignable
      *
@@ -34,7 +38,7 @@ class Setting extends Model
      * @param array $settings
      * @return void
      */
-    public static function setMany($settings)
+    public static function setMany( array $settings)
     {
         foreach ($settings as $key => $value)
         {
@@ -43,11 +47,11 @@ class Setting extends Model
     }
 
     /**
-     * @param string $key
+     * @param mixed $key
      * @param mixed $value
      * @return void
      */
-    public static function set($key, $value)
+    public static function set( $key, $value)
     {
         if($key === 'translatable'){
             return static::setTranslatableSettings($value);
